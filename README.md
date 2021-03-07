@@ -3,13 +3,13 @@
 ## users　テーブル
 
 | Column     | Type   | Options
-| ---------- | ------ | 
-| email      | string |
-| password   | string |
-| name       | string |
-| profile    | text   |
-| occupation | text   |
-| position   | text   |
+| ---------- | ------ | ----------- |
+| email      | string | null: false |
+| password   | string | null: false |
+| name       | string | null: false |
+| profile    | text   | null: false |
+| occupation | text   | null: false |
+| position   | text   | null: false |
 
 ### Association
 
@@ -19,11 +19,11 @@
 ## prototypes テーブル
 
 | Column     | Type       | Options
-| ---------- | ---------- |
-| title      | string     |
-| catch_copy | text       | 
-| concept    | text       |
-| user       | references |
+| ---------- | ---------- | ----------------- |
+| title      | string     | null: false       |
+| catch_copy | text       | null: false       | 
+| concept    | text       | null: false       |
+| user       | references | foreign_key: true |
 
 ### Association
 
@@ -33,10 +33,10 @@
 ## comments テーブル
 
 | Column    | Type       | Options
-| --------- | ---------- |
-| text      | text       |
-| user      | references |
-| prototype | references |
+| --------- | ---------- | ----------------- |
+| text      | text       | null: false       |
+| user      | references | foreign_key: true |
+| prototype | references | foreign_key: true | 
 
 ### Association
 
