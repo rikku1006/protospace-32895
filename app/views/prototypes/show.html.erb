@@ -50,7 +50,7 @@
               <%= " コメント "%>
               <% @comments.each do |comment| %>
                 <p>
-                  <strong><%= link_to comment.user.name, user_path, class: :comment_user %></strong>
+                  <strong><%= link_to comment.user.name, user_path(@prototype.user.id), class: :comment_user %></strong>
                   <%= comment.text%>
                 </p>
               <% end %>
